@@ -19,29 +19,49 @@
     <header>
       <h1>TIC-TAC-TOE</h1>
     </header>
-    <div class="flex-container">
-      <div class="player-flex-container">
-        <p>player 1</p>
+    <div class="flex-container main">
+      <div class="flex-container player">
         <label
-          ><input type="text" placeholder="Player 1 Name" autocomplete="off"
+          ><input
+            type="text"
+            placeholder="Player 1 Name"
+            id="player1"
+            autocomplete="off"
         /></label>
-        <label class="switch">
-          <input type="checkbox" /><span class="slider round"></span>
+        <label class="flex-container switch">
+          <p>X</p>
+          <input type="checkbox" id="player1select" /><span
+            class="slider round"
+          ></span>
+          <p style="left: 1rem; position: relative">O</p>
         </label>
       </div>
-      <div><p>Gameboard</p></div>
-      <div class="flex-container">
-        <p>player 2</p>
+      <div class="flex-container gameboard">
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+      </div>
+      <div class="flex-container player">
         <label
           ><input
             type="text"
             placeholder="Player 2 Name"
-            autocomplete="off" /></label
-        >X
-        <label class="switch">
-          <input type="checkbox" />
-          <span class="slider round"></span> </label
-        >O
+            id="player2"
+            autocomplete="off"
+        /></label>
+        <label class="flex-container switch">
+          <p>X</p>
+          <input type="checkbox" id="player2select" /><span
+            class="slider round"
+          ></span>
+          <p style="left: 1rem; position: relative">O</p>
+        </label>
       </div>
     </div>
   </body>

@@ -29,33 +29,42 @@ a {
   text-decoration: none;
   color: rgb(109, 109, 109);
 }
+button {
+  height: 100px;
+  width: 100px;
+}
 
 .flex-container {
   display: flex;
-  justify-content: space-between;
+}
+
+.main {
+  margin-top: 10rem;
+  justify-content: space-evenly;
 }
 
 .flex-container > div {
-  padding: 0.5rem;
-  height: 500px;
+  padding: 1rem;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.player-flex-container {
-  display: flex;
-  height: 500px;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+
+.gameboard {
+  flex-direction: row !important;
+  flex-wrap: wrap;
+  width: 310px;
+  background-color: black;
 }
 
 /* The switch - the box around the slider */
 .switch {
   position: relative;
-  display: inline-block;
+  justify-content: center;
   width: 42px;
   height: 17px;
+  margin-top: 2rem;
+  margin-right: 1rem;
 }
 
 /* Hide default HTML checkbox */
@@ -116,5 +125,14 @@ input:checked + .slider:before {
 @media screen and (max-width: 576px) {
   footer {
     display: none;
+  }
+  .main {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+  }
+  .player {
+    order: 2;
   }
 }
