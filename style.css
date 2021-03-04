@@ -34,6 +34,13 @@ button {
   width: 100px;
 }
 
+button:hover,
+button:focus,
+button:active {
+  background-color: darkgray;
+  border: inherit;
+}
+
 .flex-container {
   display: flex;
 }
@@ -82,7 +89,7 @@ button {
   left: 12px;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-color: #f3be20;
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
