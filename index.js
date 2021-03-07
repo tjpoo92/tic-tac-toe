@@ -115,9 +115,6 @@ let gameBoard = (function () {
   }
 
   function _checkWinner() {
-    console.log(player1);
-    console.log(player1.gamePiece);
-    console.log(player1.name);
     winningCombination.forEach((element) => {
       if (element.toString() === xsquares.toString()) {
         if (player1.gamePiece == "X") {
@@ -145,20 +142,24 @@ let gameBoard = (function () {
     }
   }
 
+  //Declare players so I can use them within the gameBoard module
+  let player1;
+  let player2;
+
   function _commitPlayerNames() {
     const playerFactory = (name, gamePiece) => {
       return { name, gamePiece };
     };
 
-    const player1 = playerFactory(
+    player1 = playerFactory(
       player1text.value == "" ? "Player 1" : player1text.value,
       player1select.checked ? "O" : "X"
     );
-    const player2 = playerFactory(
+    player2 = playerFactory(
       player2text.value == "" ? "Player 2" : player2text.value,
       player2select.checked ? "O" : "X"
     );
 
-    return { player1: player1 };
+    return { player1, player2 };
   }
 })();
