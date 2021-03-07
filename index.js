@@ -100,7 +100,7 @@ let gameBoard = (function () {
           return a - b;
         });
         counter++;
-        _checkWinner(player1);
+        _checkWinner();
       } else {
         e.target.innerText = "O";
         osquares.push(e.target.id);
@@ -114,7 +114,8 @@ let gameBoard = (function () {
     } else return;
   }
 
-  function _checkWinner(player1) {
+  function _checkWinner() {
+    console.log(player1);
     console.log(player1.gamePiece);
     console.log(player1.name);
     winningCombination.forEach((element) => {
@@ -158,6 +159,6 @@ let gameBoard = (function () {
       player2select.checked ? "O" : "X"
     );
 
-    return { player1: gamePiece };
+    return { player1: player1 };
   }
 })();
