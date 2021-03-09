@@ -1,6 +1,7 @@
 html {
   font-family: "Lato", sans-serif;
   background-color: bisque;
+  font-size: 16px;
 }
 
 header {
@@ -46,7 +47,7 @@ a {
 }
 
 .main {
-  margin-top: 5rem;
+  margin-top: 3.75rem;
   justify-content: space-evenly;
 }
 

@@ -116,14 +116,29 @@ let gameBoard = (function () {
 
   function _checkWinner() {
     winningCombination.forEach((element) => {
-      if (element.toString() === xsquares.toString()) {
+      let winningCounter = 0;
+      for (let index = 0; index < xsquares.length; index++) {
+        let temp = parseInt(xsquares[index]);
+        if (element.includes(temp)) {
+          winningCounter++;
+        }
+      }
+      if (winningCounter == 3) {
         if (player1.gamePiece == "X") {
           alert(`${player1.name} wins`);
         } else {
           alert(`${player2.name} wins`);
         }
         _initGame();
-      } else if (element.toString() === osquares.toString()) {
+      }
+      winningCounter = 0;
+      for (let index = 0; index < osquares.length; index++) {
+        let temp = parseInt(osquares[index]);
+        if (element.includes(temp)) {
+          winningCounter++;
+        }
+      }
+      if (winningCounter == 3) {
         if (player1.gamePiece == "O") {
           alert(`${player1.name} wins`);
         } else {
@@ -132,6 +147,9 @@ let gameBoard = (function () {
         _initGame();
       }
     });
+    if (xsquares.length == 5) {
+      alert("It's a draw!");
+    }
   }
 
   function _toggleButtonText() {
